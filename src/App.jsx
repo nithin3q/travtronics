@@ -35,7 +35,7 @@ function AppContent() {
   return (
     <>
       {user && user.role === "user" && (
-        <Suspense fallback={<div>Loading Navbar</div>}>
+        <Suspense fallback={<div>Loading Navbar ...</div>}>
           <Navbar />
         </Suspense>
       )}
