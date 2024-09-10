@@ -19,7 +19,7 @@ function App() {
     <UserProvider>
       <ShopContextProvider>
         <Router>
-          <Suspense fallback={<div>Loading...</div>}>
+          <Suspense fallback={<div className="spinner ">Loading</div>}>
             <AppContent />
           </Suspense>
           <ToastContainer />
