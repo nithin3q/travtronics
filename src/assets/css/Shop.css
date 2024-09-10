@@ -1,0 +1,48 @@
+.filters {
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.1);
+    margin-left: 10px;
+  }
+  
+  .product-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .product-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .pagination button {
+    background-color: #3289ee;
+    border: none;
+    color: white;
+  }
+  
+  .pagination button:disabled {
+    background-color: #d6d6d6;
+    cursor: not-allowed;
+  }
+  
+  .price-inputs {
+    display: flex;
+    align-items: center; /* Center vertically */
+  }
+  
+/*   
+  .container {
+    display: flex;
+  }
+  
+  .sidebar {
+    background-color: #f8f9fa;
+  }
+  
+  .filters {
+    margin-bottom: 20px;
+  }
+  
+  .product-card {
+    width: 100%;
+  }
+   */

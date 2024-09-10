@@ -1,0 +1,23 @@
+/* Login.css */
+
+.login-card {
+    max-width: 600px; /* Set the maximum width for the card */
+  }
+  
+  .login-card .card-body {
+    padding: 2rem; /* Add padding for better spacing */
+  }
+  
+  .login-card img {
+    height: 100%; /* Ensure the image fills the left side */
+    object-fit: cover; /* Cover the image nicely */
+  }
+  
+  .card-title {
+    font-weight: bold;
+    color: #343a40; /* Adjust title color */
+  }
+  .mt-55{
+    margin-top: 150px;
+  }
+  

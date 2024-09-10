@@ -1,0 +1,16 @@
+/* Navbar.css */
+
+.modal.show.d-block {
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with 50% opacity */
+  }
+  
+  .modal-dialog-centered {
+    display: flex;
+    align-items: center;
+    min-height: calc(100% - 1rem);
+  }
+  
+  .modal-content {
+    border-radius: 0.5rem;
+  }
+  
