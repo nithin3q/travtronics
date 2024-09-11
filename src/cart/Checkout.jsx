@@ -4,8 +4,13 @@ import { useNavigate } from 'react-router-dom';
 import '../assets/css/Checkout.css'; // Import a CSS file for styling
 
 function Checkout() {
-  const { cartitems, getTotalCartAmount, updateCartItemsCount, products } = useContext(ShopContext);
-  const totalAmount = getTotalCartAmount();
+  const { cartitems, updateCartItemsCount, products } = useContext(ShopContext);
+  const totalAmount = products.reduce((total, product) => {
+    if (cartitems[product.id] > 0) {
+      return total + product.price * cartitems[product.id];
+    }
+    return total;
+  }, 0);
   const navigate = useNavigate();
 
   const handleCheckout = () => {
@@ -20,7 +25,7 @@ function Checkout() {
   return (
     <div className="checkout-container">
       <h1 className="text-center mt-5">Checkout</h1>
-      {totalAmount > 0 ? (
+     
         <div className="checkout-content mt-3">
           <h2 className="text-center mb-4">Review Your Cart</h2>
           <div className="cart-items">
@@ -49,14 +54,6 @@ function Checkout() {
             </button>
           </div>
         </div>
-      ) : (
-        <div className="empty-cart text-center mt-5">
-          <h1>Your cart is empty</h1>
-          <button className="btn btn-primary mt-3" onClick={() => navigate('/shop')}>
-            Back to Shopping
-          </button>
-        </div>
-      )}
     </div>
   );
 }

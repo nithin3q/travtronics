@@ -5,119 +5,119 @@
       "productName": "Samsung s8+",
       "price": 59999,
       "category": "Electronics",
-      "productImage": "./src/assets/images/android.png"
+      "productImage": "./public/assets/images/android.png"
     },
     {
       "id": 16,
       "productName": "iphone 15",
       "price": 10999,
       "category": "Clothes",
-      "productImage": "./src/assets/images/iphone2.png"
+      "productImage": "./public/assets/images/iphone2.png"
     },
     {
       "id": 17,
       "productName": "Huawei",
       "price": 19999,
       "category": "Electronics",
-      "productImage": "./src/assets/images/huawei.png"
+      "productImage": "./public/assets/images/huawei.png"
     },
     {
       "id": 2,
       "productName": "Redmi",
       "price": 15999,
       "category": "Electronics",
-      "productImage": "./src/assets/images/oppo.png"
+      "productImage": "./public/assets/images/oppo.png"
     },
     {
       "id": 3,
       "productName": "laptop i5",
       "price": 79999,
       "category": "Electronics",
-      "productImage": "./src/assets/images/laptop.png"
+      "productImage": "./public/assets/images/laptop.png"
     },
     {
       "id": 4,
       "productName": "4k tv",
       "price": 69999,
       "category": "Electronics",
-      "productImage": "./src/assets/images/tv.png"
+      "productImage": "./public/assets/images/tv.png"
     },
     {
       "id": 5,
       "productName": "beats headset",
       "price": 29999,
       "category": "Electronics",
-      "productImage": "./src/assets/images/beat.png"
+      "productImage": "./public/assets/images/beat.png"
     },
     {
       "id": 11,
       "productName": "ibuds",
       "price": 18999,
       "category": "Electronics",
-      "productImage": "./src/assets/images/ibuds.png"
+      "productImage": "./public/assets/images/ibuds.png"
     },
     {
       "id": 9,
       "productName": "cpu",
       "price": 59999,
       "category": "Electronics",
-      "productImage": "./src/assets/images/cpu.png"
+      "productImage": "./public/assets/images/cpu.png"
     },
     {
       "id": 6,
       "productName": "buds",
       "price": 5999,
       "category": "Electronics",
-      "productImage": "./src/assets/images/buds.png"
+      "productImage": "./public/assets/images/buds.png"
     },
     {
       "id": 7,
       "productName": "camera",
       "price": 109999,
       "category": "Electronics",
-      "productImage": "./src/assets/images/camera.png"
+      "productImage": "./public/assets/images/camera.png"
     },
     {
       "id": 8,
       "productName": "cc camera",
       "price": 7999,
       "category": "Electronics",
-      "productImage": "./src/assets/images/cc.png"
+      "productImage": "./public/assets/images/cc.png"
     },
     {
       "id": 10,
       "productName": "home theatre",
       "price": 29999,
       "category": "Electronics",
-      "productImage": "./src/assets/images/home.png"
+      "productImage": "./public/assets/images/home.png"
     },
     {
       "id": 12,
       "productName": "keyboard",
       "price": 1999,
       "category": "Electronics",
-      "productImage": "./src/assets/images/keyboard.png"
+      "productImage": "./public/assets/images/keyboard.png"
     },
     {
       "id": 13,
       "productName": "mouse",
       "price": 699,
       "category": "Electronics",
-      "productImage": "./src/assets/images/mouse.png"
+      "productImage": "./public/assets/images/mouse.png"
     },
     {
       "id": 14,
       "productName": "Headset",
       "price": 15999,
       "category": "Electronics",
-      "productImage": "./src/assets/images/sony.png"
+      "productImage": "./public/assets/images/sony.png"
     },
     {
       "id": 15,
       "productName": "Bt speaker",
       "price": 6999,
       "category": "Electronics",
-      "productImage": "./src/assets/images/speaker.png"
+      "productImage": "./public/assets/images/speaker.png"
     }
   ],
   "users": [

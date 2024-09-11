@@ -5,7 +5,6 @@ export const ShopContext = createContext(null);
 
 const getDefaultCart = () => {
   let cart = {};
-  // Initialize cart with default values, but without products
   return cart;
 };
 
@@ -22,7 +21,6 @@ export const ShopContextProvider = (props) => {
     axios.get('https://travtronics.onrender.com/products')
       .then(response => {
         setProducts(response.data);
-        // Initialize cart with products
         setCartItems((prev) => {
           let newCart = { ...prev };
           response.data.forEach(product => {
@@ -32,11 +30,11 @@ export const ShopContextProvider = (props) => {
           });
           return newCart;
         });
-        setLoading(false); // Set loading to false once products are fetched
+        setLoading(false); 
       })
       .catch(error => {
         console.error('Error fetching products:', error);
-        setLoading(false); // Ensure loading is false even if there's an error
+        setLoading(false); 
       });
   }, []);
 
@@ -45,27 +43,13 @@ export const ShopContextProvider = (props) => {
     localStorage.setItem('cartitems', JSON.stringify(cartitems));
   }, [cartitems]);
 
-  const getTotalCartAmount = () => {
-    let totalAmount = 0;
-    for (const item in cartitems) {
-      if (cartitems[item] > 0) {
-        let itemInfo = products.find((product) => product.id === Number(item));
-        // Check if itemInfo exists before accessing its properties
-        if (itemInfo) {
-          totalAmount += cartitems[item] * itemInfo.price;
-        }
-      }
-    }
-    console.log(totalAmount);
-    return totalAmount;
-  };
 
   const addToCart = (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }));
+    setCartItems((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) + 1 }));
   };
 
   const removeFromCart = (itemId) => {
-    setCartItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }));
+    setCartItems((prev) => ({ ...prev, [itemId]: (prev[itemId] || 0) - 1 }));
   };
 
   const updateCartItemsCount = (newAmount, itemId) => {
@@ -77,7 +61,6 @@ export const ShopContextProvider = (props) => {
     removeFromCart,
     addToCart,
     updateCartItemsCount,
-    getTotalCartAmount,
     products,
     loading,
   };
