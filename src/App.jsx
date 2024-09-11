@@ -49,7 +49,7 @@ function AppContent() {
         <Route path="/cart" element={ <Cart /> } />
         <Route path="/checkout" element={<Checkout /> } />
         <Route path="/admin/product-management" element={user && user.role === "admin" ? <ProductManagement /> : user && user.role === "user" ? <Navigate to="/shop" replace /> : <Navigate to="/login" />} />
-        <Route path="*" element={<NotFound />} />
+        {/* <Route path="*" element={<NotFound />} /> */}
       </Routes>
     </>
   );
