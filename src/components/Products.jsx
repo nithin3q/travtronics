@@ -16,7 +16,7 @@ import i13 from '../assets/images/sony.png'
 import i14 from '../assets/images/speaker.png'
 import i15 from '../assets/images/cpu.png'
 
-export const PRODUCTS=[
+ const PRODUCTS=[
     {
         id:1,
         productName:'Android phone',

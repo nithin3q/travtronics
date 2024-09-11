@@ -3,10 +3,13 @@ import { Link } from 'react-router-dom';
 import { FaCartShopping } from "react-icons/fa6";
 import { IoIosLogOut } from "react-icons/io";
 import { UserContext } from '../Context/UserContext';
-import '../assets/css/Navbar.css'; // Import the custom CSS file
+import { ShopContext } from '../Context/Shopcontext';
+import '../assets/css/Navbar.css';
+import brand from '../assets/images/brand2.png';
 
-function Navbar () {
+function Navbar() {
   const { logout } = useContext(UserContext);
+  const { cartitems } = useContext(ShopContext);
   const [openModal, setOpenModal] = useState(false);
 
   const handleLogout = () => {
@@ -17,25 +20,38 @@ function Navbar () {
     setOpenModal(false);
   };
 
+  // Calculate total items in cart
+  const totalItemsInCart = Object.values(cartitems).reduce((total, count) => total + count, 0);
+
   return (
-    <nav className="navbar navbar-expand-lg bg-dark border-bottom border-bottom-dark fixed-top">
-      <div className="container-fluid" data-bs-theme="dark">
-        <Link to="/" className="navbar-brand text-white">Shopping</Link>
-        <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div className="container-fluid">
+        <Link to="/" className="navbar-brand ms-5">
+          <img src={brand} width='120px' alt="Brand Logo" />
+        </Link>
+        <button 
+          className="navbar-toggler" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#navbarNav" 
+          aria-controls="navbarNav" 
+          aria-expanded="false" 
+          aria-label="Toggle navigation"
+        >
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
-          <ul className="nav nav-pills ms-auto">
-            <li className="nav-item border">
-              <Link to="/cart" className="nav-link text-white ">
-                <FaCartShopping /> Cart
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item">
+              <Link to="/cart" className="nav-link text-white d-flex align-items-center">
+                <FaCartShopping className="me-2" />
+                Cart {totalItemsInCart > 0 && <span className="badge bg-warning text-dark ms-2">{totalItemsInCart}</span>}
               </Link>
             </li>
-            <li className="nav-item border ms-3">
+            <li className="nav-item ms-3">
               <button 
                 onClick={handleLogout} 
-                className="btn  "
-                style={{ display: 'flex', alignItems: 'center' }}
+                className="btn btn-outline-light d-flex align-items-center"
               >
                 <IoIosLogOut className="me-2" /> Logout
               </button>
@@ -66,6 +82,6 @@ function Navbar () {
       )}
     </nav>
   );
-};
+}
 
 export default Navbar;

@@ -2,11 +2,15 @@ import React, { useState, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { UserContext } from '../Context/UserContext';
 import { toast } from 'react-toastify';
+import Loading from './Loading';
 import '../assets/css/Login.css'; 
+import logo from '../assets/images/login.jpg';
+import brand from '../assets/images/brand.png';
 
 function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(true); // Track loading state
   const { login } = useContext(UserContext);
   const navigate = useNavigate();
 
@@ -35,13 +39,28 @@ function Login() {
     }
   };
 
+  // Simulate loading delay
+  setTimeout(() => {
+    setLoading(false);
+  }, 1000); // 2 seconds delay for demonstration
+
+  if (loading) {
+    return <Loading />;
+  }
+
   return (
-    <div className="container mt-55 d-flex justify-content-center">
+    <div className="container mt-55 d-flex flex-column align-items-center justify-content-center">
+      <img 
+        src={brand}
+        alt="Brand Logo"
+        className="brand-logo mb-4"
+        style={{ width: '150px' }}
+      />
       <div className="card login-card shadow-lg">
         <div className="row g-0">
           <div className="col-md-6 d-none d-md-block">
             <img 
-              src="https://knowledgemission.kerala.gov.in/img/official-login.jpg" 
+              src={logo}
               className="img-fluid rounded-start" 
               alt="Organization"
               style={{ height: '100%', objectFit: 'cover' }}

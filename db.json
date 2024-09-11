@@ -2,14 +2,14 @@
   "products": [
     {
       "id": 1,
-      "productName": "Android phone",
+      "productName": "Samsung s8+",
       "price": 59999,
       "category": "Electronics",
       "productImage": "./src/assets/images/android.png"
     },
     {
       "id": 16,
-      "productName": "dress",
+      "productName": "iphone 15",
       "price": 10999,
       "category": "Clothes",
       "productImage": "./src/assets/images/iphone2.png"
