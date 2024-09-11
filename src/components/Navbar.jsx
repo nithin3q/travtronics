@@ -8,7 +8,7 @@ import '../assets/css/Navbar.css';
 import brand from '../assets/images/brand2.png';
 
 function Navbar() {
-  const { logout } = useContext(UserContext);
+  const { user,logout } = useContext(UserContext);
   const { cartitems } = useContext(ShopContext);
   const [openModal, setOpenModal] = useState(false);
 
@@ -42,13 +42,16 @@ function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarNav">
           <ul className="navbar-nav ms-auto">
+          {user.role === 'user' && (
             <li className="nav-item">
               <Link to="/cart" className="nav-link text-white d-flex align-items-center">
                 <FaCartShopping className="me-2" />
                 Cart {totalItemsInCart > 0 && <span className="badge bg-warning text-dark ms-2">{totalItemsInCart}</span>}
               </Link>
             </li>
-            <li className="nav-item ms-3">
+          )}
+            
+              <li className="nav-item ms-3">
               <button 
                 onClick={handleLogout} 
                 className="btn btn-outline-light d-flex align-items-center"
@@ -56,6 +59,8 @@ function Navbar() {
                 <IoIosLogOut className="me-2" /> Logout
               </button>
             </li>
+              
+            
           </ul>
         </div>
       </div>

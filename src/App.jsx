@@ -41,7 +41,7 @@ function AppContent() {
 
   return (
     <>
-      {user && user.role === "user" && <Navbar />}
+      {user  && <Navbar />}
       <Routes>
          <Route path="/" element={user ? <Navigate to={user.role === "admin" ? "/admin/product-management" : "/shop"} /> : <Login />} />
         <Route path="/login" element={user ? <Navigate to={user.role === "admin" ? "/admin/product-management" : "/shop"} /> : <Login />} />
