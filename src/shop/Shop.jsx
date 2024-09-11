@@ -26,7 +26,7 @@ function Shop() {
     const fetchProducts = async () => {
       setLoading(true);
       try {
-        const response = await axios.get("https://travtronics.onrender.com/products");
+        const response = await axios.get("http://localhost:5000/products");
         setProducts(response.data);
       } catch (error) {
         console.error("Error fetching products:", error);

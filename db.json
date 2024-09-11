@@ -9,9 +9,9 @@
     },
     {
       "id": 16,
-      "productName": "iphone 15",
-      "price": 10999,
-      "category": "Clothes",
+      "productName": "iPhone 15",
+      "price": 99999,
+      "category": "Electronics",
       "productImage": "./assets/images/iphone2.png"
     },
     {
@@ -30,77 +30,77 @@
     },
     {
       "id": 3,
-      "productName": "laptop i5",
+      "productName": "Laptop i5",
       "price": 79999,
       "category": "Electronics",
       "productImage": "./assets/images/laptop.png"
     },
     {
       "id": 4,
-      "productName": "4k tv",
+      "productName": "4K TV",
       "price": 69999,
       "category": "Electronics",
       "productImage": "./assets/images/tv.png"
     },
     {
       "id": 5,
-      "productName": "beats headset",
+      "productName": "Beats Headset",
       "price": 29999,
       "category": "Electronics",
       "productImage": "./assets/images/beat.png"
     },
     {
       "id": 11,
-      "productName": "ibuds",
+      "productName": "iBuds",
       "price": 18999,
       "category": "Electronics",
       "productImage": "./assets/images/ibuds.png"
     },
     {
       "id": 9,
-      "productName": "cpu",
+      "productName": "CPU",
       "price": 59999,
       "category": "Electronics",
       "productImage": "./assets/images/cpu.png"
     },
     {
       "id": 6,
-      "productName": "buds",
+      "productName": "Buds",
       "price": 5999,
       "category": "Electronics",
       "productImage": "./assets/images/buds.png"
     },
     {
       "id": 7,
-      "productName": "camera",
+      "productName": "Camera",
       "price": 109999,
       "category": "Electronics",
       "productImage": "./assets/images/camera.png"
     },
     {
       "id": 8,
-      "productName": "cc camera",
+      "productName": "CC Camera",
       "price": 7999,
       "category": "Electronics",
       "productImage": "./assets/images/cc.png"
     },
     {
       "id": 10,
-      "productName": "home theatre",
+      "productName": "Home Theatre",
       "price": 29999,
       "category": "Electronics",
       "productImage": "./assets/images/home.png"
     },
     {
       "id": 12,
-      "productName": "keyboard",
+      "productName": "Keyboard",
       "price": 1999,
       "category": "Electronics",
       "productImage": "./assets/images/keyboard.png"
     },
     {
       "id": 13,
-      "productName": "mouse",
+      "productName": "Mouse",
       "price": 699,
       "category": "Electronics",
       "productImage": "./assets/images/mouse.png"
@@ -114,10 +114,52 @@
     },
     {
       "id": 15,
-      "productName": "Bt speaker",
+      "productName": "BT Speaker",
       "price": 6999,
       "category": "Electronics",
       "productImage": "./assets/images/speaker.png"
+    },
+    {
+      "id": 18,
+      "productName": "The Great Gatsby",
+      "price": 499,
+      "category": "Books",
+      "productImage": "./assets/images/gatsby.jpg"
+    },
+    {
+      "id": 19,
+      "productName": "Harry Potter",
+      "price": 799,
+      "category": "Books",
+      "productImage": "./assets/images/harrypotter.jpg"
+    },
+    {
+      "id": 20,
+      "productName": "1984 by George Orwell",
+      "price": 599,
+      "category": "Books",
+      "productImage": "./assets/images/1984.jpg"
+    },
+    {
+      "id": 21,
+      "productName": "T-Shirt",
+      "price": 999,
+      "category": "Clothes",
+      "productImage": "./assets/images/tshirt.webp"
+    },
+    {
+      "id": 22,
+      "productName": "Jeans",
+      "price": 1999,
+      "category": "Clothes",
+      "productImage": "./assets/images/jeans.webp"
+    },
+    {
+      "id": 23,
+      "productName": "Sneakers",
+      "price": 2999,
+      "category": "Clothes",
+      "productImage": "./assets/images/sneakers.webp"
     }
   ],
   "users": [

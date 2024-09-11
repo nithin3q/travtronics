@@ -18,7 +18,7 @@ export const ShopContextProvider = (props) => {
 
   useEffect(() => {
     // Fetch products from JSON Server
-    axios.get('https://travtronics.onrender.com/products')
+    axios.get('http://localhost:5000/products')
       .then(response => {
         setProducts(response.data);
         setCartItems((prev) => {
